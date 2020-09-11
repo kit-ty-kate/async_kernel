@@ -33,7 +33,7 @@ let push (type a) (t : a t) a =
   | Counter r -> r.length <- r.length + 1
 ;;
 
-let pop_exn (type a) (t : a t) =
+let pop_exn (type a) (t : a t) : a =
   match t with
   | Stack s -> Stack.pop_exn s
   | Counter r ->
